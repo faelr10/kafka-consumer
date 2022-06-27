@@ -12,23 +12,5 @@ export class LoggerController {
     return this.loggerService.create(createLoggerDto);
   }
 
-  @Get()
-  findAll() {
-    return this.loggerService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.loggerService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateLoggerDto: UpdateLoggerDto) {
-    return this.loggerService.update(+id, updateLoggerDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.loggerService.remove(+id);
-  }
+  
 }
